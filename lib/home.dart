@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
                   child: Text(
                     "Get Started",
                     style:
-                        TextStyle(color: Theme.of(context).colorScheme.secondary),
+                        TextStyle(color: Color(0xFFc07f00)),
                   )),
             )
           ],
