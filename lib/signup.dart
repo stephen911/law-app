@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:law_app/Signin.dart';
 import 'package:law_app/hompage.dart';
 
@@ -34,19 +35,18 @@ class _SignUpState extends State<SignUp> {
               padding: EdgeInsets.all(10),
               child: Text(
                 "Welcome Back!",
-                style: TextStyle(
+                style: GoogleFonts.lato(
                     color: Color(0xFFc07f00),
                     fontWeight: FontWeight.bold,
                     fontSize: 30),
               ),
-            )
-            ,
+            ),
             SizedBox(
               height: 40,
             ),
             Container(
-              width: double.infinity,
-              height: 60,
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
+              margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
@@ -70,8 +70,8 @@ class _SignUpState extends State<SignUp> {
               height: 40,
             ),
             Container(
-              width: double.infinity,
-              height: 60,
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
+              margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
@@ -91,13 +91,51 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
             ),
-
             SizedBox(
               height: 40,
             ),
             Container(
-              width: double.infinity,
-              height: 60,
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(5)),
+              child: Center(
+                child: TextField(
+                  obscureText: _isVisible,
+                  decoration: InputDecoration(
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            width: 0,
+                            color: Color.fromARGB(255, 247, 247, 247))),
+                    labelText: 'Password',
+                    prefixIcon: const Icon(Icons.lock),
+                    suffixIcon: IconButton(
+                        icon: _isVisible
+                            ? Icon(Icons.visibility_off)
+                            : Icon(Icons.visibility),
+                        onPressed: () {
+                          setState(() {
+                            print(_isVisible);
+
+                            _visible();
+                            print("done");
+                            print(_isVisible);
+                          });
+                        }),
+                    // hintText: 'Username or Email',
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
+              margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
@@ -131,53 +169,13 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
             ),
-            
-            SizedBox(
-              height: 40,
-            ),
-            Container(
-              width: double.infinity,
-              height: 60,
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(5)),
-              child: Center(
-                child: TextField(
-                  obscureText: _isVisible,
-                  decoration: InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            width: 0,
-                            color: Color.fromARGB(255, 247, 247, 247))),
-                    labelText: 'password',
-                    prefixIcon: const Icon(Icons.lock),
-                    suffixIcon: IconButton(
-                        icon: _isVisible
-                            ? Icon(Icons.visibility_off)
-                            : Icon(Icons.visibility),
-                        onPressed: () {
-                          setState(() {
-                            print(_isVisible);
-
-                            _visible();
-                            print("done");
-                            print(_isVisible);
-                          });
-                        }),
-                    // hintText: 'Username or Email',
-                  ),
-                ),
-              ),
-            ),
             SizedBox(
               height: 20,
             ),
             GestureDetector(
               onTap: () {},
               child: Text("Forgot Password?",
-                  style: TextStyle(color: Color(0xff999999))),
+                  style: GoogleFonts.lato(color: Color(0xff999999))),
             ),
             SizedBox(
               height: 30,
@@ -196,8 +194,8 @@ class _SignUpState extends State<SignUp> {
                         MaterialPageRoute(builder: (context) => Homepage()));
                   },
                   child: Text(
-                    "Login",
-                    style: TextStyle(color: Colors.white),
+                    "Sign Up",
+                    style: GoogleFonts.lato(color: Colors.white),
                   )),
             ),
             SizedBox(
@@ -205,7 +203,9 @@ class _SignUpState extends State<SignUp> {
             ),
             Row(
               children: [
-                SizedBox(width: 90,),
+                SizedBox(
+                  width: 90,
+                ),
                 Text("Already have an account?"),
                 GestureDetector(
                   onTap: () {
@@ -213,7 +213,7 @@ class _SignUpState extends State<SignUp> {
                         MaterialPageRoute(builder: (context) => SignIn()));
                   },
                   child: Text("Sign In",
-                      style: TextStyle(
+                      style: GoogleFonts.lato(
                           decoration: TextDecoration.underline,
                           color: Color(0xFFc07f00),
                           fontWeight: FontWeight.bold)),
