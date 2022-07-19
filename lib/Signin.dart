@@ -153,7 +153,10 @@ class _SignInState extends State<SignIn> {
                           fontWeight: FontWeight.bold)),
                 ),
               ],
-            )
+            ),
+            SizedBox(
+              height: 40,
+            ),
           ],
         ),
       ),
