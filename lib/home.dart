@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:law_app/Signin.dart';
 import 'package:law_app/hompage.dart';
 
@@ -38,7 +39,7 @@ class _HomeState extends State<Home> {
             Container(
                 padding: EdgeInsets.only(left: 30),
                 child: Text("TheLaw",
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                         color: Colors.white,
                         fontSize: 45,
                         fontWeight: FontWeight.bold))),
@@ -48,7 +49,7 @@ class _HomeState extends State<Home> {
             Container(
                 padding: EdgeInsets.only(left: 30),
                 child: Text("Getting a lawyer\nJust got easier",
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                         color: Colors.white,
                         fontSize: 28,
                         fontWeight: FontWeight.bold))),
@@ -58,7 +59,8 @@ class _HomeState extends State<Home> {
             Container(
                 padding: EdgeInsets.only(left: 30),
                 child: Text("Now you can be heard. Find\n a lawyer near you",
-                    style: TextStyle(color: Colors.white, fontSize: 16))),
+                    style:
+                        GoogleFonts.lato(color: Colors.white, fontSize: 16))),
             SizedBox(
               height: 50,
             ),
@@ -66,19 +68,16 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.only(left: 30.0),
               child: ElevatedButton(
                   style: ButtonStyle(
-                    // padding: MaterialStateProperty.all(EdgeInsets.only(left: 30)),
-                    fixedSize: MaterialStateProperty.all(Size(300, 50)),
+                      // padding: MaterialStateProperty.all(EdgeInsets.only(left: 30)),
+                      fixedSize: MaterialStateProperty.all(Size(300, 50)),
                       backgroundColor: MaterialStateProperty.all(Colors.white)),
                   onPressed: () {
-                    Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => SignIn()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SignIn()));
                   },
                   child: Text(
                     "Get Started",
-                    style:
-                        TextStyle(color: Color(0xFFc07f00)),
+                    style: GoogleFonts.lato(color: Color(0xFFc07f00)),
                   )),
             )
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:law_app/Signin.dart';
 import 'package:law_app/hompage.dart';
 
@@ -34,19 +35,18 @@ class _SignUpState extends State<SignUp> {
               padding: EdgeInsets.all(10),
               child: Text(
                 "Welcome Back!",
-                style: TextStyle(
+                style: GoogleFonts.lato(
                     color: Color(0xFFc07f00),
                     fontWeight: FontWeight.bold,
                     fontSize: 30),
               ),
-            )
-            ,
+            ),
             SizedBox(
               height: 40,
             ),
             Container(
-              width: double.infinity,
-              height: 60,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
@@ -70,8 +70,8 @@ class _SignUpState extends State<SignUp> {
               height: 40,
             ),
             Container(
-              width: double.infinity,
-              height: 60,
+             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
@@ -91,13 +91,12 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
             ),
-
             SizedBox(
               height: 40,
             ),
             Container(
-              width: double.infinity,
-              height: 60,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
@@ -131,13 +130,12 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
             ),
-            
             SizedBox(
               height: 40,
             ),
             Container(
-              width: double.infinity,
-              height: 60,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
@@ -177,7 +175,7 @@ class _SignUpState extends State<SignUp> {
             GestureDetector(
               onTap: () {},
               child: Text("Forgot Password?",
-                  style: TextStyle(color: Color(0xff999999))),
+                  style: GoogleFonts.lato(color: Color(0xff999999))),
             ),
             SizedBox(
               height: 30,
@@ -196,8 +194,8 @@ class _SignUpState extends State<SignUp> {
                         MaterialPageRoute(builder: (context) => Homepage()));
                   },
                   child: Text(
-                    "Login",
-                    style: TextStyle(color: Colors.white),
+                    "Sign Up",
+                    style: GoogleFonts.lato(color: Colors.white),
                   )),
             ),
             SizedBox(
@@ -205,7 +203,9 @@ class _SignUpState extends State<SignUp> {
             ),
             Row(
               children: [
-                SizedBox(width: 90,),
+                SizedBox(
+                  width: 90,
+                ),
                 Text("Already have an account?"),
                 GestureDetector(
                   onTap: () {
@@ -213,7 +213,7 @@ class _SignUpState extends State<SignUp> {
                         MaterialPageRoute(builder: (context) => SignIn()));
                   },
                   child: Text("Sign In",
-                      style: TextStyle(
+                      style: GoogleFonts.lato(
                           decoration: TextDecoration.underline,
                           color: Color(0xFFc07f00),
                           fontWeight: FontWeight.bold)),

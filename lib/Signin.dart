@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:law_app/hompage.dart';
 import 'package:law_app/signup.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _SignInState extends State<SignIn> {
               padding: EdgeInsets.all(10),
               child: Text(
                 "Welcome!",
-                style: TextStyle(
+                style: GoogleFonts.lato(
                     color: Color(0xFFc07f00),
                     fontWeight: FontWeight.bold,
                     fontSize: 30),
@@ -44,8 +45,8 @@ class _SignInState extends State<SignIn> {
               height: 40,
             ),
             Container(
-              width: double.infinity,
-              height: 60,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
@@ -69,8 +70,8 @@ class _SignInState extends State<SignIn> {
               height: 40,
             ),
             Container(
-              width: double.infinity,
-              height: 60,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
@@ -110,7 +111,7 @@ class _SignInState extends State<SignIn> {
             GestureDetector(
               onTap: () {},
               child: Text("Forgot Password?",
-                  style: TextStyle(color: Color(0xff999999))),
+                  style: GoogleFonts.lato(color: Color(0xff999999))),
             ),
             SizedBox(
               height: 30,
@@ -130,7 +131,7 @@ class _SignInState extends State<SignIn> {
                   },
                   child: Text(
                     "Login",
-                    style: TextStyle(color: Colors.white),
+                    style: GoogleFonts.lato(color: Colors.white),
                   )),
             ),
             SizedBox(
@@ -138,16 +139,17 @@ class _SignInState extends State<SignIn> {
             ),
             Row(
               children: [
-                SizedBox(width: 90,),
+                SizedBox(
+                  width: 90,
+                ),
                 Text("Don't Have an account?"),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => SignUp()));
-
                   },
                   child: Text("Sign Up",
-                      style: TextStyle(
+                      style: GoogleFonts.lato(
                           decoration: TextDecoration.underline,
                           color: Color(0xFFc07f00),
                           fontWeight: FontWeight.bold)),

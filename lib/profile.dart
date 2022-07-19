@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:law_app/hompage.dart';
 import 'package:law_app/subscribe.dart';
 
@@ -47,13 +48,13 @@ class _ProfileState extends State<Profile> {
                       Container(
                         child: Text(
                           "John Osei Kwame",
-                          style: TextStyle(
+                          style: GoogleFonts.lato(
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                       ),
                       Container(
                         child: Text("General Lawyer",
-                            style: TextStyle(
+                            style: GoogleFonts.lato(
                               color: Colors.white,
                             )),
                       ),
@@ -61,7 +62,7 @@ class _ProfileState extends State<Profile> {
                         children: [
                           Container(
                             child: Text("4.0",
-                                style: TextStyle(
+                                style: GoogleFonts.lato(
                                     color: Colors.white, fontSize: 10)),
                           ),
                           SizedBox(
@@ -69,7 +70,7 @@ class _ProfileState extends State<Profile> {
                           ),
                           Container(
                             child: Text("God's Love Associates",
-                                style: TextStyle(
+                                style: GoogleFonts.lato(
                                     color: Colors.white, fontSize: 10)),
                           )
                         ],
@@ -79,9 +80,11 @@ class _ProfileState extends State<Profile> {
                   decoration: BoxDecoration(
                     color: Colors.black,
                     boxShadow: <BoxShadow>[
-                BoxShadow(
-                    offset: Offset(0, 5), color: Colors.black, blurRadius: 6),
-              ],
+                      BoxShadow(
+                          offset: Offset(0, 5),
+                          color: Colors.black,
+                          blurRadius: 6),
+                    ],
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ))
@@ -96,7 +99,7 @@ class _ProfileState extends State<Profile> {
                 children: [
                   Container(
                     child: Text("Experience",
-                        style: TextStyle(
+                        style: GoogleFonts.lato(
                           color: Colors.black,
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -104,7 +107,7 @@ class _ProfileState extends State<Profile> {
                   ),
                   Container(
                     child: Text("7yrs+",
-                        style: TextStyle(
+                        style: GoogleFonts.lato(
                             color: Colors.red,
                             fontWeight: FontWeight.bold,
                             fontSize: 14)),
@@ -118,7 +121,7 @@ class _ProfileState extends State<Profile> {
                 children: [
                   Container(
                     child: Text("Cases Won",
-                        style: TextStyle(
+                        style: GoogleFonts.lato(
                           color: Colors.black,
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -126,7 +129,7 @@ class _ProfileState extends State<Profile> {
                   ),
                   Container(
                     child: Text("200+",
-                        style: TextStyle(
+                        style: GoogleFonts.lato(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
                             fontSize: 14)),
@@ -135,12 +138,8 @@ class _ProfileState extends State<Profile> {
               ),
               GestureDetector(
                 onTap: () {
-
-                  Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => Subscribe()));
-                  
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Subscribe()));
                 },
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -159,7 +158,7 @@ class _ProfileState extends State<Profile> {
                         width: 9,
                       ),
                       Text("Book Now",
-                          style: TextStyle(
+                          style: GoogleFonts.lato(
                             color: Colors.white,
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
@@ -170,7 +169,9 @@ class _ProfileState extends State<Profile> {
               )
             ],
           ),
-          SizedBox(height: 30,),
+          SizedBox(
+            height: 30,
+          ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 20),
             decoration: BoxDecoration(
@@ -190,7 +191,7 @@ class _ProfileState extends State<Profile> {
                       padding: EdgeInsets.all(10),
                       child: Text(
                         "About Lawyer",
-                        style: TextStyle(
+                        style: GoogleFonts.lato(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 30),
@@ -203,7 +204,7 @@ class _ProfileState extends State<Profile> {
                       padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2),
                       child: Text(
                         "General",
-                        style: TextStyle(
+                        style: GoogleFonts.lato(
                           color: Colors.green,
                           fontSize: 11,
                         ),
@@ -220,10 +221,9 @@ class _ProfileState extends State<Profile> {
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-
                   child: Text(
                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                         color: Colors.black,
                         // fontWeight: FontWeight.bold,
                         fontSize: 14),
@@ -233,7 +233,9 @@ class _ProfileState extends State<Profile> {
             ),
           ),
           Container(
-          margin: EdgeInsets.symmetric(horizontal: 5, vertical: 30), child: Text("Send Message"),),
+            margin: EdgeInsets.symmetric(horizontal: 5, vertical: 30),
+            child: Text("Send Message"),
+          ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             margin: EdgeInsets.symmetric(horizontal: 20),
@@ -244,33 +246,34 @@ class _ProfileState extends State<Profile> {
               ],
               borderRadius: BorderRadius.circular(10),
               color: Colors.white,
-            ), child: Center(
-                child: TextField(
-                  decoration: InputDecoration(
-                      
-                      hintText: 'Message',
-                      border: InputBorder.none),
-                ),
-              ),),
-              SizedBox(height: 20,),
-
-              Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-              child: ElevatedButton(
-                  style: ButtonStyle(
-                      // padding: MaterialStateProperty.all(EdgeInsets.only(left: 30)),
-                      fixedSize: MaterialStateProperty.all(Size(350, 50)),
-                      backgroundColor: MaterialStateProperty.all(Color(0xFFc07f00))),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Homepage()));
-                  },
-                  child: Text(
-                    "Submit",
-                    style: TextStyle(
-                        color: Colors.white),
-                  )),
-            )
+            ),
+            child: Center(
+              child: TextField(
+                decoration: InputDecoration(
+                    hintText: 'Message', border: InputBorder.none),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+            child: ElevatedButton(
+                style: ButtonStyle(
+                    // padding: MaterialStateProperty.all(EdgeInsets.only(left: 30)),
+                    fixedSize: MaterialStateProperty.all(Size(350, 50)),
+                    backgroundColor:
+                        MaterialStateProperty.all(Color(0xFFc07f00))),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Homepage()));
+                },
+                child: Text(
+                  "Submit",
+                  style: GoogleFonts.lato(color: Colors.white),
+                )),
+          )
         ],
       )),
     );
