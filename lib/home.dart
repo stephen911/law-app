@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:law_app/Signin.dart';
 import 'package:law_app/hompage.dart';
 
 class Home extends StatefulWidget {
@@ -72,7 +73,7 @@ class _HomeState extends State<Home> {
                     Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => Homepage()));
+                builder: (context) => SignIn()));
                   },
                   child: Text(
                     "Get Started",

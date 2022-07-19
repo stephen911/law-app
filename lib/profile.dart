@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:law_app/hompage.dart';
+import 'package:law_app/subscribe.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -133,7 +134,14 @@ class _ProfileState extends State<Profile> {
                 ],
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+
+                  Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Subscribe()));
+                  
+                },
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   decoration: BoxDecoration(

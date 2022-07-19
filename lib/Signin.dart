@@ -12,10 +12,11 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 247, 247, 247),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(),
+            SizedBox(height: 100,),
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
