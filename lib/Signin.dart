@@ -45,7 +45,7 @@ class _SignInState extends State<SignIn> {
               height: 40,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
@@ -70,7 +70,7 @@ class _SignInState extends State<SignIn> {
               height: 40,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),

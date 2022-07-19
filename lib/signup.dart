@@ -45,7 +45,7 @@ class _SignUpState extends State<SignUp> {
               height: 40,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
@@ -70,7 +70,7 @@ class _SignUpState extends State<SignUp> {
               height: 40,
             ),
             Container(
-             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
@@ -95,7 +95,7 @@ class _SignUpState extends State<SignUp> {
               height: 40,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
@@ -110,7 +110,7 @@ class _SignUpState extends State<SignUp> {
                         borderSide: BorderSide(
                             width: 0,
                             color: Color.fromARGB(255, 247, 247, 247))),
-                    labelText: 'Confirm Password',
+                    labelText: 'Password',
                     prefixIcon: const Icon(Icons.lock),
                     suffixIcon: IconButton(
                         icon: _isVisible
@@ -134,7 +134,7 @@ class _SignUpState extends State<SignUp> {
               height: 40,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
@@ -149,7 +149,7 @@ class _SignUpState extends State<SignUp> {
                         borderSide: BorderSide(
                             width: 0,
                             color: Color.fromARGB(255, 247, 247, 247))),
-                    labelText: 'password',
+                    labelText: 'Confirm Password',
                     prefixIcon: const Icon(Icons.lock),
                     suffixIcon: IconButton(
                         icon: _isVisible

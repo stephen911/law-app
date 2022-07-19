@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
             ),
             Container(
                 padding: EdgeInsets.only(left: 30),
-                child: Text("Now you can be heard. Find\n a lawyer near you",
+                child: Text("Now you can be heard. Find\na lawyer near you",
                     style:
                         GoogleFonts.lato(color: Colors.white, fontSize: 16))),
             SizedBox(
