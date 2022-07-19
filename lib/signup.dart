@@ -1,84 +1,178 @@
 import 'package:flutter/material.dart';
+import 'package:law_app/Signin.dart';
 import 'package:law_app/hompage.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({Key? key}) : super(key: key);
+class SignUp extends StatefulWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
-  State<SignIn> createState() => _SignInState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _SignInState extends State<SignIn> {
+class _SignUpState extends State<SignUp> {
+  bool _isVisible = true;
+
+  void _visible() {
+    setState(() {
+      _isVisible = !_isVisible;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 247, 247, 247),
       body: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(),
+            SizedBox(
+              height: 100,
+            ),
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
                 "Welcome Back!",
-                style:
-                    TextStyle(color: Theme.of(context).colorScheme.secondary),
+                style: TextStyle(
+                    color: Color(0xFFc07f00),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
               ),
+            )
+            ,
+            SizedBox(
+              height: 40,
             ),
             Container(
               width: double.infinity,
-              height: 40,
+              height: 60,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
                 child: TextField(
                   decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.person),
-                      hintText: 'Full Name',
-                      border: InputBorder.none),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            width: 0,
+                            color: Color.fromARGB(255, 247, 247, 247))),
+                    labelText: 'Full Name',
+                    prefixIcon: const Icon(Icons.person),
+                    // hintText: 'Username or Email',
+                  ),
                 ),
               ),
             ),
+            SizedBox(
+              height: 40,
+            ),
             Container(
               width: double.infinity,
-              height: 40,
+              height: 60,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
                 child: TextField(
                   decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.person),
-                      hintText: 'Username or Email',
-                      border: InputBorder.none),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            width: 0,
+                            color: Color.fromARGB(255, 247, 247, 247))),
+                    labelText: 'Username or Email',
+                    prefixIcon: const Icon(Icons.person),
+                    // hintText: 'Username or Email',
+                  ),
                 ),
               ),
             ),
+
+            SizedBox(
+              height: 40,
+            ),
             Container(
               width: double.infinity,
-              height: 40,
+              height: 60,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
                 child: TextField(
+                  obscureText: _isVisible,
                   decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.person),
-                      hintText: 'Password',
-                      border: InputBorder.none),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            width: 0,
+                            color: Color.fromARGB(255, 247, 247, 247))),
+                    labelText: 'Confirm Password',
+                    prefixIcon: const Icon(Icons.lock),
+                    suffixIcon: IconButton(
+                        icon: _isVisible
+                            ? Icon(Icons.visibility_off)
+                            : Icon(Icons.visibility),
+                        onPressed: () {
+                          setState(() {
+                            print(_isVisible);
+
+                            _visible();
+                            print("done");
+                            print(_isVisible);
+                          });
+                        }),
+                    // hintText: 'Username or Email',
+                  ),
                 ),
               ),
             ),
+            
+            SizedBox(
+              height: 40,
+            ),
             Container(
               width: double.infinity,
-              height: 40,
+              height: 60,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(5)),
               child: Center(
                 child: TextField(
+                  obscureText: _isVisible,
                   decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.person),
-                      hintText: 'Confirm Password',
-                      border: InputBorder.none),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            width: 0,
+                            color: Color.fromARGB(255, 247, 247, 247))),
+                    labelText: 'password',
+                    prefixIcon: const Icon(Icons.lock),
+                    suffixIcon: IconButton(
+                        icon: _isVisible
+                            ? Icon(Icons.visibility_off)
+                            : Icon(Icons.visibility),
+                        onPressed: () {
+                          setState(() {
+                            print(_isVisible);
+
+                            _visible();
+                            print("done");
+                            print(_isVisible);
+                          });
+                        }),
+                    // hintText: 'Username or Email',
+                  ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             GestureDetector(
               onTap: () {},
@@ -86,34 +180,43 @@ class _SignInState extends State<SignIn> {
                   style: TextStyle(color: Color(0xff999999))),
             ),
             SizedBox(
-              height: 40,
+              height: 30,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 30.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
               child: ElevatedButton(
                   style: ButtonStyle(
                       // padding: MaterialStateProperty.all(EdgeInsets.only(left: 30)),
-                      fixedSize: MaterialStateProperty.all(Size(300, 50)),
-                      backgroundColor: MaterialStateProperty.all(Colors.white)),
+                      fixedSize: MaterialStateProperty.all(Size(350, 50)),
+                      backgroundColor:
+                          MaterialStateProperty.all(Color(0xFFc07f00))),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Homepage()));
                   },
                   child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                        color: Theme.of(context).colorScheme.secondary),
+                    "Login",
+                    style: TextStyle(color: Colors.white),
                   )),
-            ), SizedBox(height: 50,),
+            ),
+            SizedBox(
+              height: 10,
+            ),
             Row(
               children: [
+                SizedBox(width: 90,),
                 Text("Already have an account?"),
                 GestureDetector(
-                  onTap: () {},
-                  child: Text("Login",
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SignIn()));
+                  },
+                  child: Text("Sign In",
                       style: TextStyle(
                           decoration: TextDecoration.underline,
-                          color: Theme.of(context).colorScheme.secondary, fontWeight: FontWeight.bold)),
+                          color: Color(0xFFc07f00),
+                          fontWeight: FontWeight.bold)),
                 ),
               ],
             )
